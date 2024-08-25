@@ -1,0 +1,355 @@
+@font-face {
+  font-weight: 700;
+  font-family: 'Perpetua';
+  src: url("./fonts/Perpetua/Perpetua-Bold_1.ttf");
+}
+@font-face {
+  font-weight: 400;
+  font-family: 'Perpetua';
+  src: url("./fonts/Perpetua/Perpetua.ttf");
+}
+@font-face {
+  font-weight: 700;
+  font-family: 'PerpetuaTM';
+  src: url("./fonts/Perpetua Titling MT Bold.ttf");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: 'Poppins';
+  src: url("./fonts/Poppins/Poppins-Bold.ttf");
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: 'Poppins';
+  src: url("./fonts/Poppins/Poppins-Medium.ttf");
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: 'Poppins';
+  src: url("./fonts/Poppins/Poppins-Regular.ttf.ttf");
+}
+
+html, body {
+  min-height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height:100vh;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  background: rgb(234,103,91);
+  background: linear-gradient(90deg, rgba(234,103,91,1) 0%, rgba(201,141,166,1) 100%);
+}
+
+.container {
+  width: 1280px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.main {
+  display: flex;
+}
+
+.block {
+  display: flex;
+
+  width: 1920px;
+  height: 1080px;
+  border-radius: 20px;
+  outline: 20px solid #000;
+  background-color: #fff;
+  -webkit-box-shadow: 30px 30px 20px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 30px 30px 20px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 30px 30px 20px 0px rgba(0, 0, 0, 0.25);
+}
+
+.block__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 800px;
+  background-image: url(./images/slider.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  align-items: flex-end;
+  flex: none;
+  order: 1;
+}
+
+.block__center {
+  width: 543px;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  order: 2;
+}
+
+.block__right {
+  display: flex;
+  flex-direction: column;
+  order: 3;
+}
+
+.block__right-item {
+ flex-basis: 50%;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  height: 122px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.menu>ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.menu>ul>li {
+  list-style: none;
+  height: 100%;
+}
+
+.menu>ul>li>a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-family: 'Perpetua';
+  font-size: 26px;
+  font-weight: 700;
+  padding: 0 22px;
+  height: 100%;
+  color: #000000;
+  text-decoration: none;
+}
+
+.menu>ul>li>a::before {
+  content:" ";
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #F43636;
+  height: 4px;
+  border-radius: 4px;
+  opacity: 0;
+}
+
+.menu>ul>li>a.is-active {
+  color: #F43636;
+}
+
+.menu>ul>li>a.is-active::before {
+  opacity: 1;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 118px;
+  height: 118px;
+  background-color: #FF7B7B;
+  bottom: 0;
+  right: 0;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 70px;
+  height: 428px;
+  background-color: #FF7B7B;
+  flex: none;
+  order: 1;
+}
+
+.title__main {
+  font-family: 'PerpetuaTM';
+  font-size: 96px;
+  color: #fff;
+  line-height: 115.5px;
+}
+
+.title__line {
+  width: 258px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: #fff;
+  margin-left: 44px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-family: 'Poppins';
+  order: 2;
+  padding: 30px 34px;
+  background-color: #fff;
+  flex: none;
+}
+
+.author__sticker {
+  background-color: #FF7B7B;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  left: -88px;
+  z-index: 4;
+  width: 88px;
+  border-radius: 20px 0 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.author__sticker span {
+  font-family: 'Perpetua';
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  transform: rotate(-90deg);
+  flex: none;
+}
+
+.author__avatar {
+  flex: none;
+  margin-left: 20px;
+  width: 155px;
+}
+
+.author__avatar img {
+  max-width: 100%;
+}
+
+.author__main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.author__title {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  letter-spacing: -0.04em;
+}
+
+.author__text {
+  color: #737373;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.author__link {
+  display: inline-flex;
+  margin-top: 10px;
+  text-transform: uppercase;
+  color: #737373;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.banner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  order: 3;
+  padding: 37px 50px;
+  flex-grow: 1;
+  background-image: url(./images/banner.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.banner__title {
+  font-family: 'Perpetua';
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 27.5px;
+  color: #fff;
+  flex-grow: 1;
+}
+
+.banner-info {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  order: 1;
+  padding: 32px 40px;
+  background-image: url(./images/info.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.banner-info__title {
+  font-family: 'Perpetua';
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 27.5px;
+}
+
+.text-block {
+  order: 2;
+  background-color: #FF7B7B;
+  padding: 61px 74px;
+}
+
+.text-block__title {
+  font-family: 'Poppins';
+  color: #fff;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  width: 80%;
+}
+
+.text-block__text {
+  font-family: 'Poppins';
+  color: #fff;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 16px;
+}
+
+.text-block__link {
+  font-family: 'Perpetua';
+  color: #fff;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+}
